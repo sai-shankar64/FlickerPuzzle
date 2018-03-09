@@ -1,0 +1,72 @@
+<html>
+<title>Flickr Puzzle</title>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header>
+  <h1><span>F l i c k r</span><span>P u z z l e</span></h1>
+  <div class='menu'>
+    <select name='category' id='category'>
+        <option selected>pick a theme</option>
+        <option>mountains</option>
+        <option>rivers</option>
+        <option>waterfalls</option>
+        <option>birds</option>
+        <option>animals</option>
+        <option>monument</option>
+        <option>maps</option>
+  </select>
+    <div class='level'>
+      <p>L E V E L</p>
+      <ul>
+        <li><i id='1' class="fa fa-star"></i></li>
+        <li><i id='2' class="fa fa-star-o"></i></li>
+        <li><i id='3' class="fa fa-star-o"></i></li>
+        <li><i id='4' class="fa fa-star-o"></i></li>
+      </ul>
+    </div>
+    <button id="start-btn" type='button' class='btn'>And Start</button>
+    <div class="right">
+      <p>
+        <i class="fa fa-clock-o"></i>
+        <span id="timer">00:00:00</span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <i id="gamebg" class="fa fa-photo"></i>
+  <div id="playboard-container">
+    <div id="playboard">
+      <ul id="grid">
+      </ul>
+    </div>
+  </div>
+  <div id="description">
+    <img id="picture" src='picture.svg'>
+    <p>
+      <span id='title'>solve this</span> <i class="fa fa-puzzle-piece"></i>
+    </p>
+  </div>
+
+</main>
+<div id="modal" class="modal">
+  <div class="loader"></div>
+</div>
+<div id="win" class="modal">
+  <div>
+    <i class="fa fa-thumbs-up won"></i>
+    <p id="verdict">You Won!</p>
+    <button id="reset-btn" class='btn'>Thanks</button>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="utility.js"></script>
+<script src="timetracker.js"></script>
+<script src="judge.js"></script>
+<script src="flickr.js"></script>
+<script src="gameboard.js"></script>
+<script src="game.js"></script>
+<script src="main.js"></script>
+</html>
